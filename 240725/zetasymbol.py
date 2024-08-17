@@ -4,7 +4,7 @@ from mpmath import zeta, gamma, cos, pi
 
 # Define the critical line
 sigma = 0.5
-t_values = np.linspace(0, 50, 1000)
+t_values = np.linspace(0, 1000, 1000)
 
 # Define the zeta function along the critical line using numerical methods
 def zeta_numerical(t):

@@ -1,0 +1,66 @@
+Timestamp (UTC): 2024-08-08T11:11:29.230Z
+Activity ID: acfee61a-a958-464a-8e25-4e0378230000
+Transport protocol: TCP
+Round-trip time: 718
+Available bandwidth: 0.291
+Frame rate: 0
+Gateway name: afdfp-rdgateway-r1.wvd.microsoft.com:443
+Gateway logon method: Azure Active Directory
+Remote computer: 
+
+Activity Id:
+acfee61a-a958-464a-8e25-4e0378230000
+
+Session Id:
+No session id
+
+Flight settings:
+Nh_Nick_M1: false
+Nh_Nick_M2: false
+Nh_Mobius_AVD: true
+Nh_FLU: true
+Nh_Feedback: true
+Nh_Feedback_Prod: true
+Nh_Feedback_V2: true
+Nh_Location_Redirection: true
+Nh_SpecialKey_Redirection: true
+Nh_Camera_Redirection: true
+Nh_Disable_Menu_Items: false
+Nh_Use_Avd_Client_Options: true
+Nh_Use_Mobius_Entra_App_ID: true
+Nh_Use_EndUserApi_GetCpc: true
+Nh_Use_Entra_B2B_TenantId: false
+Nh_Skip_3p_Cookie_Request: false
+Ufp_Use_New_Fpa: false
+Nh_New_Error_Handler: true
+Nh_Remote_App_Launcher: false
+
+User Settings:
+theme: Dark
+showLocalResourcesUI: true
+allowPrinter: true
+allowMicrophone: true
+allowClipboard: true
+allowLocation: true
+allowCamera: true
+allowFileTransfer: true
+printer: false
+microphone: false
+clipboard: true
+location: false
+camera: false
+fileTransfer: true
+redirectionsActive:
+	printer: false
+	microphone: false
+	clipboard: true
+	location: false
+	camera: false
+	fileTransfer: true
+ime: false
+selectedKeyboard: None
+highDpi: false
+downloadConsentStatus: false
+showFlwReminder: true
+avcWebCodecDecodingEnabled: Browser Unsupported
+specialKeys: true

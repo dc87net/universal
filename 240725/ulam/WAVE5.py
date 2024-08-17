@@ -7,10 +7,10 @@ from mpmath import mp, cos, sinh, cosh, pi, gamma
 mp.dps = 25
 
 # Custom symbolic zeta function method with approximation
-def custom_zeta(s, terms=1000):
+def custom_zeta(s, terms=1100):
     return sum([1/mp.power(n, s) for n in range(1, terms)])
 
-def zeta_symbolic(t, terms=1000):
+def zeta_symbolic(t, terms=2000):
     s = mp.mpc(0.5, t)
     s_conjugate = mp.mpc(0.5, -t)
     return (mp.power(2, mp.mpf(0.5) - 1j*t) * mp.power(pi, -(mp.mpf(0.5) + 1j*t)) * cosh(pi * (mp.mpf(0.5) + 1j*t) / 2) *
@@ -20,7 +20,7 @@ def zeta_symbolic(t, terms=1000):
 t_values = np.linspace(0, 50, 1000)
 
 # Compute symbolic zeta function values with a limited number of terms for convergence
-terms = 1000  # Adjust the number of terms as needed for convergence
+terms = 2000  # Adjust the number of terms as needed for convergence
 zeta_vals = [zeta_symbolic(t, terms) for t in t_values]
 
 # Extract real and imaginary parts
@@ -29,7 +29,7 @@ imag_parts = np.array([val.imag for val in zeta_vals], dtype=float)
 amplitude = np.sqrt(real_parts**2 + imag_parts**2)
 
 # Identify zeros (where both real and imaginary parts are close to zero)
-epsilon = 1e-6  # Small threshold to identify zeros
+epsilon = 1  # Small threshold to identify zeros
 zeros = [(0.5, t) for t, r, i in zip(t_values, real_parts, imag_parts) if abs(r) < epsilon and abs(i) < epsilon]
 zeros_real = [zero[0] for zero in zeros]
 zeros_imag = [zero[1] for zero in zeros]
@@ -45,10 +45,10 @@ z_real = real_parts
 z_imag = imag_parts
 
 # Plot the real part of the wave function in polar coordinates
-ax.plot(theta, r, z_real, label='Real Part', color='blue')
+ax.plot(theta, r, z_real, label='Real Part', color='orange')
 
 # Plot the imaginary part of the wave function in polar coordinates
-ax.plot(theta, r, z_imag, label='Imaginary Part', color='green')
+ax.plot(theta, r, z_imag, label='Imaginary Part', color='blue')
 
 # Highlight the zeros
 ax.scatter(zeros_imag, [0] * len(zeros_imag), zs=0, zdir='z', color='red', label='Zeros', depthshade=True)
@@ -58,8 +58,8 @@ ax.scatter(zeros_imag, [0] * len(zeros_imag), zs=0, zdir='z', color='red', label
 critical_radius = np.mean(amplitude)
 
 # Create a sphere
-u = np.linspace(0, 2 * np.pi, 100)
-v = np.linspace(0, np.pi, 100)
+u = np.linspace(0, 2 * np.pi, 1000)
+v = np.linspace(0, np.pi, 1000)
 x = critical_radius * np.outer(np.cos(u), np.sin(v))
 y = critical_radius * np.outer(np.sin(u), np.sin(v))
 z = critical_radius * np.outer(np.ones(np.size(u)), np.cos(v))

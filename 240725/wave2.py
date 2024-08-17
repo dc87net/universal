@@ -14,7 +14,7 @@ def zeta_symbolic(t):
             gamma(0.5 + 1j*t) * zeta(s_conjugate))
 
 # Define the range for the imaginary part of s
-t_values = np.linspace(0, 10000, 1000)
+t_values = np.linspace(0, 1000, 5000)
 
 # Compute symbolic zeta function values
 zeta_vals = [zeta_symbolic(t) for t in t_values]
