@@ -18,6 +18,8 @@ t_values = np.linspace(0, 100, 2000)
 
 # Compute zeta function values
 zeta_vals = np.array([complex(zeta_symbolic(t)) for t in t_values])
+print(f"Zeta Values:\n")
+print(f"{zeta_vals}")
 real_parts = np.real(zeta_vals)
 imag_parts = np.imag(zeta_vals)
 

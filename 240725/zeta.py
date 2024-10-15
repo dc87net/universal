@@ -10,7 +10,7 @@ t_values = np.linspace(0, 50, 1000)
 # Define the zeta function along the critical line
 def zeta_critical_line(t):
     s = complex(0.5, t)
-    return zeta(s)
+    return zeta(s)w
 
 # Find zeros along the critical line using a root-finding algorithm
 initial_guesses = np.arange(1, 50, 5)  # Initial guesses for the root finding
