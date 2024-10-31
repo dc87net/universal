@@ -20,7 +20,7 @@ r = np.sqrt(x**2 + y**2 + z**2)
 dr_dtheta = np.gradient(r, theta)
 
 # Normalize the derivative for color mapping
-norm_dr_dtheta = (dr_dtheta - np.min(dr_dtheta)) / (np.max(dr_dtheta) - np.min(dr_dtheta))
+norm_dr_dtheta = np.exp((dr_dtheta - np.min(dr_dtheta)) / (np.max(dr_dtheta) - np.min(dr_dtheta)))
 
 # Create a 3D plot using Plotly
 fig = go.Figure()
