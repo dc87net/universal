@@ -2,8 +2,10 @@ import math
 import plotly.graph_objects as go
 import numpy as np
 
+
 # Parameters for the parametric equations
-theta = np.linspace(0, 2 * np.pi, 10**5)  # Angular displacement
+percent=70;
+theta = np.linspace(0, (percent/100)*(2*np.pi), 10**5)  # Angular displacement
 
 # Using derived parameters from our Fourier Transform calculations
 # Example values for amplitude and base radius

@@ -70,6 +70,6 @@ ani = animation.FuncAnimation(fig, update, frames=200, blit=False)
 ani.save('wave_function_evolution.gif', writer='imagemagick', fps=20)
 
 # Alternatively, you can save it as a video
-# ani.save('wave_function_evolution.mp4', writer='ffmpeg', fps=20)
+ani.save('wave_function_evolution.mp4', writer='ffmpeg', fps=20)
 
 plt.show()

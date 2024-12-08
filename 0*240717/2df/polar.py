@@ -183,7 +183,6 @@ animation_buttons = [
 
 # Update layout with fixed axis ranges and buttons
 fig.update_layout(
-    title="Comprehensive Visualization of f",
     updatemenus=[dict(
         type="buttons",
         buttons=animation_buttons,

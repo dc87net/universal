@@ -19,19 +19,7 @@ def custom_gravity(x, y, G_theta_theta, scaling_factor=1):
 G_theta_theta_values = 1e-42  # Example value, replace with your actual G_theta_theta results
 
 # Compute the traditional gravity surface
-#z_traditional = traditional_gravity(x, y)
-
-# Compute the custom gravity surface using G_theta_theta
-z_custom = custom_gravity(x, y, G_theta_theta_values)
-
-# Create the 3D wireframe plots
-fig = go.Figure()
-
-# Traditional gravity plot
-# f#ig.add_trace(go.Surface(x=x, y=y, z=z_traditional, colorscale='Blues', opacity=0.7, name='Traditional Gravity'))
-
-# Custom gravity plot using G_theta_theta
-fig.add_trace(go.Surface(x=x, y=y, z=z_custom, colorscale='Jet', opacity=0.6, name='Calculated Gravity (G_theta_theta)'))
+#z_traditional = tra
 
 # Update layout for better visualization
 fig.update_layout(

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define parameters
-omega_0 = 2 * np.pi  # Baseline angular frequency
+omega_0 = (np.pi/2)/(2*np.pi)  # Baseline angular frequency
 alpha = 0.1  # Coupling strength or interaction term coefficient
 dt = 0.01  # Time step
 time = np.arange(0, 10, dt)  # Time array
